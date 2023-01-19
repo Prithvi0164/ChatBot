@@ -4,10 +4,6 @@ Created on Wed Jan 18 13:38:22 2023
 
 @author: prith
 """
-import os
-path="D:\Python_Working\Chat_Bot_GPT_Streamlit"
-
-os.chdir(path)
 
 import openai 
 import streamlit as st
@@ -16,9 +12,8 @@ import streamlit as st
 # pip install streamlit-chat  
 from streamlit_chat import message
 
-#openai.api_key = st.secrets[key]
+openai.api_key = st.secrets["pass"]
 
-openai.api_key = "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"
 
 def generate_response(prompt):
     completions = openai.Completion.create(
